@@ -10,6 +10,8 @@ select.addEventListener("click", function(){
 	
 });
 
+// -------------- Botão cadastrar ----
+
 
 
 
@@ -26,10 +28,11 @@ function exibeHtmlFilhoDaOpcao(qtdOpcoes, opcao, id) {
 		var divFilha = document.querySelector("#"+id+"1");
 		console.log("divifilhas");
 		tornarVisivel(divFilha);
-		//exibeBotaoContinuar();
+		exibeBotaoContinuar();
 	} else {
 			
 		if(opcao != "0") {
+			exibeBotaoContinuar();
 			tornarInvisivel(divFilha);
 			//exibeBotaoContinuar();
 		}
@@ -61,6 +64,7 @@ function verificaSeTemFilhos(opcao) {
 }
 
 function exibeBotaoContinuar(){
+	console.log("botaaaooo");
 	botao = document.querySelector("#btn-finalizar");
 	botao.classList.remove("invisivel");
 }
