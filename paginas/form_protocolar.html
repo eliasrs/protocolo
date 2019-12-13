@@ -5,7 +5,6 @@
 		<link rel="stylesheet" type="text/css" href="css/reset.css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-		<link rel="icon" href="favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" type="text/css" href="../css/index.css">
 		<title>MPF - Protocolo eletrônico</title>
 
@@ -20,7 +19,7 @@
 			</div>
 		</header>
 		<main>
-			<section>
+			<section style="margin-left: 20px">
 				<form>
 	<!-- ------------- Campos de ESCOLHA do tipo de protocolo -->							
 					<div id="escolhaServico" class="row">  
@@ -44,6 +43,19 @@
 							  </label>
 						  </div>
 					</div>
+					
+					 <div id="opcao-1" class="">
+						<label for="aaa-1">Tipo de documento</label>
+						<select name="entry.1166974658" id="aaa-1" class="col-md-4 mb-3 form-control is-valid">
+							<option disabled selected value="">Escolha...</option>
+							<option value="1">Peticionar em processo do MPF</option>
+							<option value="2">Responder a um Ofício do MPF</option>
+							<option value="2">Protocar documento avulso</option>
+							<option value="2">Representação de fato ilícito ou irregularidade</option>
+							<option value="2">Protocar documento avulso</option>
+							
+						</select>
+					  </div>
 	<!-- ------------- Campos se escolhido Petição -->
 	
 					<div class="col-md-4 mb-3 invisivel">
@@ -84,7 +96,7 @@
 						      </div>
 						  </div> -->
 						  
-						  <div class="form-group col-md-4">
+						  <div class="form-group col-md-1">
 						     <label for="validationServer02">UF</label>
 						      <select class="form-control is-valid" id="validationServer02" required>
 						        <option>DF</option>
@@ -95,10 +107,10 @@
 						      </div>
 						  </div>
 						  
-						   <div class="form-group col-md-4">
-						     <label for="validationServer02">UF</label>
+						   <div class="form-group col-md-3">
+						     <label for="validationServer02">Unidade:</label>
 						      <select class="form-control is-valid" id="validationServer02" required>
-						        <option selected>Escolher...</option>
+						        <option disabled selected>Escolher...</option>
 						        <option>PGR</option>
 						        <option>PR/DF - Procuradoria da República no Distrito Federal</option>
 						      </select>
@@ -107,32 +119,79 @@
 						      </div>
 						  </div>			  
 						  
-						   <div class="col-md-4 mb-3">
+						   
+						  					
+				  	  </div>
+				  	  
+				  	  <div class="col-md-4 mb-3">
 						      <label for="validationServer02">Setor</label>
-						      <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Sobrenome" value="(61)98602-4286" required>
+						      <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Sobrenome" value="Gabinete do PGR" required>
 						      <div class="valid-feedback">
 						        Tudo certo!
 						      </div>
-						  </div>					
-				  	  </div>
+					  </div>
+				  	  
+				  	  
+				  	  <div id="opcao-1" class="col-md-3 mb-6">
+						<label for="aaa-1">Representa uma Pessoa Jurídica?</label>
+						<select name="entry.1166974658" id="aaa-1" class="col-md-4 mb-3 form-control is-valid">
+							<option disabled selected value="">Escolha...</option>
+							<option value="1">Sim</option>
+							<option value="2">Não</option>
+
+						</select>
+					  </div>
+					  
+					  <div id="aaa-11" class="invisivel row" style="width: 90%; margin-left: 0px">
+						  <div class="col-md-2 mb-1">
+						      <label for="validationServer01">Nº do CNPJ</label>
+						      <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Nome" value="03.659.166/0001-02" required>
+						      <div class="valid-feedback">
+						        Tudo certo!
+						      </div>
+						  </div>
+						  <div class="col-md-4 mb-3">
+						      <label for="validationServer02">Nome da Instituição</label>
+						      <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Sobrenome" value="Instituto Brasileiro do Meio Ambiente" disabled required>
+						      <div class="valid-feedback">
+						        Tudo certo!
+						      </div>
+						  </div>				  
+					  </div>
+				  	  
+				  	  
 				  </div>				 		  
 				</form>
 			</section>
 			
 <!-- ------------- Campos que INDEPENDEM  do tipo de protocolo: íntegras, captcha, declaração, botão -->					
-			<section id="parte_comum_final" class="invisivel">
+			<section id="btn-finalizar" class="invisivel" style="margin-left: 20px">
+				 
+				  <hr>
+				  <div class="col-md-4 mb-3">
+					  <h4>Dados do Documento</h3>
+				  </div>
+				 
+				  
 				  
 				  <div class="col-md-4 mb-3">
 				      <label for="validationServer02">Resumo</label>
 				      <textarea class="form-control is-valid" id="validationServer02" placeholder="Digite um resumo do documento" value="(61)98602-4286" required></textarea>
 				  </div>
 				  
-				 <div class="col-md-4 mb-3 form-check">
+				  <div class="row" style="width: 90%; margin-left: 24%; margin-bottom: 40px">
+				  	 <button class="btn btn-warning col-md-auto" type="submit">Selecionar Arquivos</button>
+				  </div>
+				  
+				 <div class="col-md-4 mb-3 form-check" style="width: 90%; margin-left: 17px">
 				      <input class="form-check-input" type="checkbox" id="gridCheck">
 				      <label for="validationServer02">Documento Sigiloso</label>
 				      
 				  </div>
+				  
 					<!-- falso captcha -->
+				  
+				  <hr>
 				  <div class="col-md-4 mb-3">
 					    <div class="input-group">
 					        <div class="input-group-prepend">
@@ -143,7 +202,7 @@
 				  </div>
 	
 				  <div class="form-group">
-				    <div class="form-check">
+				    <div class="form-check" style="width: 90%; margin-left: 17px">
 				      <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
 				      <label class="form-check-label" for="invalidCheck3">
 				        Declaro que as informações fornecidas são verdadeiras e estou ciente de estar sujeito à invalidação do protocolo e às penas da legislação pertinente em caso de fornecimento de dados falsos
@@ -154,11 +213,11 @@
 				    </div>
 				  </div>
 				  
-				  <div class="row justify-content-md-center">
-				  	 <button class="btn btn-warning col-md-auto" type="submit">Selecionar Arquivos</button>
+				  <div class="col-md-4 mb-3" style="margin-left: 35%">
+					   <button class="btn btn-primary" type="submit">Protocolar documento</button>
 				  </div>
 				  
-				  <button class="btn btn-primary" type="submit">Protocolar documento</button>
+				
 			</section>
 			
 			
@@ -167,6 +226,6 @@
 		</main>
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-		<script src="../js/principal.js" ></script>
+		<script src="../js/escolhaCadSimples.js"></script>
 	</body>
 </html>
