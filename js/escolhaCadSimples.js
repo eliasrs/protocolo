@@ -1,16 +1,40 @@
-//------- Etapa 1: capturar a opção do problema escolhido 
+//------- Etapa 1: capturar a opção dE REPRESENTANTE DE PJ escolhido para exibir os campos filhos 
 
-var select = document.querySelector("#aaa-1");
-select.addEventListener("click", function(){
+var pj = document.querySelector("#bbb-1");
+pj.addEventListener("click", function(){
+	var id = this.getAttribute("id");       			// pega o id do select clicado, não da opção
+	var qtdOpcoes = this.length;   					 	// quantidade de opções naquele select
+	var opcao = this.selectedIndex;         			// indice da opção selecionada dentro do select
+	exibeHtmlFilhoDaPJ(qtdOpcoes, opcao, id);
+	console.log(opcao);
+	
+});
+
+
+//------- Etapa 1: capturar a opção do ADVOGADO escolhido para exibir os campos filhos 
+
+var advogado = document.querySelector("#aaa-1");
+advogado.addEventListener("click", function(){
 	var id = this.getAttribute("id");       			// pega o id do select clicado, não da opção
 	var qtdOpcoes = this.length;   					 	// quantidade de opções naquele select
 	var opcao = this.selectedIndex;         			// indice da opção selecionada dentro do select
 	exibeHtmlFilhoDaOpcao(qtdOpcoes, opcao, id);
-	console.log("pensei");
+	console.log(opcao);
 	
 });
 
-// -------------- Botão cadastrar ----
+//------- Etapa 2 arquivo Protocolar: capturar a opção do TIPO DE PROTOCOLO escolhido para exibir os campos filhos
+
+var tipoProtocolo = document.querySelector("#ccc-1");
+tipoProtocolo.addEventListener("click", function(){
+	var id = this.getAttribute("id");       			// pega o id do select clicado, não da opção
+	var qtdOpcoes = this.length;   					 	// quantidade de opções naquele select
+	var opcao = this.selectedIndex;         			// indice da opção selecionada dentro do select
+	exibeHtmlFilhoDaPJ(qtdOpcoes, opcao, id);
+	console.log("deu");
+	//console.log(qtdOpcoes+" ; "+opcao+" ; "+id);
+	
+});
 
 
 
@@ -20,7 +44,31 @@ select.addEventListener("click", function(){
 
 
 
-//--------------------------------------------------- Funções ----------------------------------------
+
+
+//--------------------------------------------------- Funções ------------------------------------------------------------------------------------------------
+
+
+
+//-------------- Lógica de exibir opção Filha da PJ ----
+
+
+function exibeHtmlFilhoDaPJ(qtdOpcoes, opcao, id) {
+	// verifica se exites opção filha
+
+	var divFilha = document.querySelector("#"+id+"1");
+	if (opcao=="1") {
+		tornarVisivel(divFilha);		
+	} else {
+		tornarInvisivel(divFilha);
+		}	
+}
+
+
+
+
+//-----------Lógica de exibir opção filha para ADVOGADO e contem funções usada pela Lógica de exibir opção filha da PJ
+
 function exibeHtmlFilhoDaOpcao(qtdOpcoes, opcao, id) {
 		// verifica se exites opção filha
 	
@@ -31,18 +79,14 @@ function exibeHtmlFilhoDaOpcao(qtdOpcoes, opcao, id) {
 		exibeBotaoContinuar();
 	} else {
 			
-		if(opcao != "0") {
+		if(opcao == "2") {
 			exibeBotaoContinuar();
 			tornarInvisivel(divFilha);
 			//exibeBotaoContinuar();
 		}
 			
 		
-	}
-
-		
-			
-			
+	}			
 }
 
 
