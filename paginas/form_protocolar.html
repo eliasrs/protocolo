@@ -21,65 +21,163 @@
 		<main>
 			<section style="margin-left: 20px">
 				<form>
-	<!-- ------------- Campos de ESCOLHA do tipo de protocolo -->							
-					<div id="escolhaServico" class="row">  
-						  <div class="col-1"></div>
-						  <div class="form-check col-3">
-							<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="opcao1" checked>
-							  <label class="form-check-label" for="exampleRadios1">
-							    Peticionar em processo do MPF
-							  </label>
-						  </div>
-						  <div class="form-check col-3">
-							  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="opcao2">
-							  <label class="form-check-label" for="exampleRadios2">
-							    Responder a um Ofício do MPF
-							  </label>
-						  </div>
-						  <div class="form-check col-3">
-							  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="opcao2">
-							  <label class="form-check-label" for="exampleRadios2">
-							    Protocolar documento Avulso
-							  </label>
-						  </div>
-					</div>
-					
+	<!-- ---------------------------------------------------------------- Campos de ESCOLHA do tipo de protocolo -->							
+										
 					 <div id="opcao-1" class="">
-						<label for="aaa-1">Tipo de documento</label>
-						<select name="entry.1166974658" id="aaa-1" class="col-md-4 mb-3 form-control is-valid">
+						<label for="ccc-1">Tipo de protocolo</label>
+						<select name="entry.1166974658" id="ccc-1" class="col-md-4 mb-3 form-control is-valid">
 							<option disabled selected value="">Escolha...</option>
 							<option value="1">Peticionar em processo do MPF</option>
 							<option value="2">Responder a um Ofício do MPF</option>
-							<option value="2">Protocar documento avulso</option>
-							<option value="2">Representação de fato ilícito ou irregularidade</option>
-							<option value="2">Protocar documento avulso</option>
-							
+							<option value="3">Protocar documento avulso</option>
+							<option value="4">Representação de fato ilícito ou irregularidade</option>
+							<option value="5">Protocar documento avulso</option>
 						</select>
 					  </div>
-	<!-- ------------- Campos se escolhido Petição -->
+	<!-- ---------------------------------------------------------------- Campos se escolhido Petição -->
 	
-					<div class="col-md-4 mb-3 invisivel">
-				      <label for="validationServer01">Informo o N° PROCESSO/PROCEDIMENTO</label>
-				      <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Nome" value="EX 1.00.000.00056489/2019-45" required>
-				      <div class="valid-feedback">
-				        Tudo certo!
-				      </div>
-				 	</div>
+					<div  id="ccc-11" class="invisivel">
+						
+						<div  class="col-md-4 mb-3 ">
+					      <label for="validationServer01">Informo o N° PROCESSO/PROCEDIMENTO</label>
+					      <input type="text" onfocusout="myFunction()" class="form-control is-valid" id="validationServer01" placeholder="Nome" value="EX 1.00.000.00056489/2019-45" required>
+					       <div  class="col-md-4 mb-3" style="margin-left: 98%; margin-top: -6%">
+						  	<button value="ccc-111" onclick="exibeFilhoPorBotao(this.value)" type="button" class="btn btn-primary">Buscar</button>
+					  	  </div>
+					 	</div>
+					 	
+					 	<div id="ccc-111" class="invisivel">
+						  <hr>
+						  <div class="col-md-4 mb-3">
+							  <h4>Detalhes do expediente de referência</h3>
+						  </div>
+					      <table style="padding-top: 50%; width:70%">
+							  <tr></tr>
+							  <tr>
+							    <th>Número: </td>
+							    <td>1.21.000.001759/2019-42</td>
+							    <td style="background: green">Eletrônico</td>
+							  </tr>
+							  <tr>
+							    <th>Classe: </td>
+							    <td>Notícia de Fato</td>
+							  </tr>
+							  <tr>
+							    <th>Unidade de cadastro:</td>
+							    <td>PR-MS - PROCURADORIA DA REPÚBLICA - MATO GROSSO DO SUL</td>
+							  </tr>
+							  <tr>
+							    <th>Distribuição:</td>
+							    <td>PR-MS - 7º Ofício</td>
+							  </tr>
+							  <tr>
+							    <th>Grupo Temático:</td>
+							    <td>2ª Câmara - Criminal</td>
+							  </tr>
+							  <tr>
+							    <th>Assunto:</td>
+							    <td>3574 - Contrabando ou descaminho (Crimes Praticados por Particular Contra a Administração em Geral/DIREITO PENAL)</td>
+							  </tr>
+							  <tr>
+							    <th>Localização atual:</td>
+							    <td>PGR/2A.CAM - 2A.CÂMARA DE COORDENAÇÃO E REVISÃO DO MPF</td>
+							  </tr>
+							  <tr>
+							    <th>Situação:</td>
+							    <td>Em andamento</td>
+							  </tr>
+							  
+						  </table>
+						  <table style="width:15%; margin-top: -11%; margin-left: 800px">
+								<tr>
+									<th>Consulta em:</td>
+								    <td>21/01/2020 16:08</td>
+								</tr>
+								<tr>
+								    <th>Autuação:</td>
+								    <td>08/10/2019</td>
+								</tr>
+						  </table>
+					  	  <div class="" style="margin-left: 33%; margin-top: 10%">
+						  	<button value="btn-finalizar" onclick="exibeBotaoProtocolar(this.value)" class="btn btn-primary" type="button">Continuar</button>
+					  	  </div>						  
+					 	</div>
+					</div>
+					
 	
-	<!-- ------------- Campos se escolhido Resposta -->	
-	
-					<div class="col-md-4 mb-3 invisivel">
+	<!-- ---------------------------------------------------------------- Campos se escolhido Resposta -->	
+				<div id="ccc-12" class="invisivel">
+					<div  class="col-md-4 mb-3 ">
 				      <label for="validationServer01">Informo o N° do Documento</label>
 				      <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Nome" value="EX PGR-0056489/2019" required>
-				      <div class="valid-feedback">
-				        Tudo certo!
-				      </div>
-				 	</div>
+				    </div>
+					<div  class="col-md-4 mb-3" style="margin-left: 32%; margin-top: -4%">
+					  	<button value="ccc-121" onclick="exibeFilhoPorBotao(this.value)" type="button" class="btn btn-primary">Buscar</button>
+					</div>
+				 						
+					<div id="ccc-121" class="invisivel">
+					 		
+						  <hr>
+						  <div class="col-md-4 mb-3">
+							  <h4>Detalhes do expediente de referência</h3>
+						  </div>
+					      <table style="padding-top: 50%; width:70%">
+							  <tr></tr>
+							  <tr>
+							    <th>Número: </td>
+							    <td>1.21.000.001759/2019-42</td>
+							    <td style="background: green">Eletrônico</td>
+							  </tr>
+							  <tr>
+							    <th>Classe: </td>
+							    <td>Notícia de Fato</td>
+							  </tr>
+							  <tr>
+							    <th>Unidade de cadastro:</td>
+							    <td>PR-MS - PROCURADORIA DA REPÚBLICA - MATO GROSSO DO SUL</td>
+							  </tr>
+							  <tr>
+							    <th>Distribuição:</td>
+							    <td>PR-MS - 7º Ofício</td>
+							  </tr>
+							  <tr>
+							    <th>Grupo Temático:</td>
+							    <td>2ª Câmara - Criminal</td>
+							  </tr>
+							  <tr>
+							    <th>Assunto:</td>
+							    <td>3574 - Contrabando ou descaminho (Crimes Praticados por Particular Contra a Administração em Geral/DIREITO PENAL)</td>
+							  </tr>
+							  <tr>
+							    <th>Localização atual:</td>
+							    <td>PGR/2A.CAM - 2A.CÂMARA DE COORDENAÇÃO E REVISÃO DO MPF</td>
+							  </tr>
+							  <tr>
+							    <th>Situação:</td>
+							    <td>Em andamento</td>
+							  </tr>
+							  
+						  </table>
+						  <table style="width:15%; margin-top: -11%; margin-left: 800px">
+								<tr>
+									<th>Consulta em:</td>
+								    <td>21/01/2020 16:08</td>
+								</tr>
+								<tr>
+								    <th>Autuação:</td>
+								    <td>08/10/2019</td>
+								</tr>
+						  </table>
+					  	  <div class="" style="margin-left: 33%; margin-top: 10%">
+						  	<button value="btn-finalizar" onclick="exibeBotaoProtocolar(this.value)" class="btn btn-primary" type="button">Continuar</button>
+					  	  </div>						  
+					</div>
+				</div>
 	
-	<!-- ------------- Campos se escolhido Documento avulso -->	
+	<!-- --------------------------------------------------------------- Campos se escolhido Documento Avulso -->	
 	
-				  <div class="">
-				      <div class="col-md-4 mb-3">
+				  <div id="ccc-13" class="invisivel">
+				      <div  class="col-md-4 mb-3">
 					      <label for="validationServer01">Nome do destinatário</label>
 					      <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Nome" value="Vladimir Aras" required>
 					      <div class="valid-feedback">
@@ -117,10 +215,7 @@
 						      <div class="valid-feedback">
 						        Tudo certo!
 						      </div>
-						  </div>			  
-						  
-						   
-						  					
+						  </div>			  	  					
 				  	  </div>
 				  	  
 				  	  <div class="col-md-4 mb-3">
@@ -129,41 +224,32 @@
 						      <div class="valid-feedback">
 						        Tudo certo!
 						      </div>
-					  </div>
-				  	  
-				  	  
-				  	  <div id="opcao-1" class="col-md-3 mb-6">
-						<label for="aaa-1">Representa uma Pessoa Jurídica?</label>
-						<select name="entry.1166974658" id="aaa-1" class="col-md-4 mb-3 form-control is-valid">
-							<option disabled selected value="">Escolha...</option>
-							<option value="1">Sim</option>
-							<option value="2">Não</option>
-
-						</select>
-					  </div>
-					  
-					  <div id="aaa-11" class="invisivel row" style="width: 90%; margin-left: 0px">
-						  <div class="col-md-2 mb-1">
-						      <label for="validationServer01">Nº do CNPJ</label>
-						      <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Nome" value="03.659.166/0001-02" required>
-						      <div class="valid-feedback">
-						        Tudo certo!
-						      </div>
-						  </div>
-						  <div class="col-md-4 mb-3">
-						      <label for="validationServer02">Nome da Instituição</label>
-						      <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Sobrenome" value="Instituto Brasileiro do Meio Ambiente" disabled required>
-						      <div class="valid-feedback">
-						        Tudo certo!
-						      </div>
-						  </div>				  
-					  </div>
-				  	  
-				  	  
-				  </div>				 		  
+					  </div>	 		  	  
+				  </div>
+				  
+				  
+<!-- --------------------------------------------------------------- Campos se escolhido Documento Representação de Fato ilícito ou irregularidade -->				  
+				  <div id="ccc-14" class="invisivel">
+						<div>
+							<label for="aaa-1">O fato ilícito ou irregularidade está relacionada a Membro, Servidor ou Terceirizado do MPF?</label>
+							<select name="entry.1166974658" id="aaa-1" class="col-md-4 mb-3 form-control is-valid">
+								<option disabled selected value="">Escolha...</option>
+								<option value="1">Sim</option>
+								<option value="2">Não</option>
+	
+							</select>
+						</div>
+				  </div> 
+				  				 		  
 				</form>
 			</section>
 			
+
+
+
+			
+			
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->			
 <!-- ------------- Campos que INDEPENDEM  do tipo de protocolo: íntegras, captcha, declaração, botão -->					
 			<section id="btn-finalizar" class="invisivel" style="margin-left: 20px">
 				 
@@ -172,7 +258,15 @@
 					  <h4>Dados do Documento</h3>
 				  </div>
 				 
-				  
+				  <div id="opcao-1" class="col-md-3 mb-6">
+						<label for="aaa-1">O protocolo será em nome de: </label>
+						<select name="entry.1166974658" id="aaa-1" class="form-control is-valid">
+							<option disabled  value="">Escolha...</option>
+							<option selected value="1">Ibama - Instituto do Brasil</option>
+							<option value="2">João da Silva Sauros</option>
+
+						</select>
+					  </div>
 				  
 				  <div class="col-md-4 mb-3">
 				      <label for="validationServer02">Resumo</label>
@@ -214,18 +308,14 @@
 				  </div>
 				  
 				  <div class="col-md-4 mb-3" style="margin-left: 35%">
-					   <button class="btn btn-primary" type="submit">Protocolar documento</button>
+					   <button class="btn btn-primary" onclick="alert('Documento protocolado com SUCESSO!!!')" type="button" >Protocolar documento</button>
 				  </div>
-				  
-				
+				  				
 			</section>
-			
-			
-			
-			
+
 		</main>
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-		<script src="../js/escolhaCadSimples.js"></script>
+		<script src="../js/escolhaProtocolar.js"></script>
 	</body>
 </html>
